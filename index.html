@@ -1,34 +1,33 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#000000">
-  <title>Symulator Dewelopera</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css" />
+  <title>Kalkulator Finansowy</title>
 </head>
 <body>
-  <h1>Symulator Dewelopera</h1>
-  <div id="game-container">
-    <!-- Panel mieszkań -->
-    <section id="properties">
-      <h2>Mieszkania</h2>
-      <div id="properties-list">
-        <!-- Tutaj będą wyświetlane kupione mieszkania -->
-      </div>
-      <button id="buy-property">Kup Mieszkanie</button>
-    </section>
+  <h1>Kalkulator Finansowy</h1>
 
-    <!-- Panel ofert klientów -->
-    <section id="offers">
-      <h2>Oferty Klientów</h2>
-      <div id="offers-list">
-        <!-- Tutaj będą wyświetlane oferty klientów -->
-      </div>
-    </section>
-  </div>
+  <section>
+    <h2>Kalkulator Lokaty</h2>
+    <input id="lokataKwota" type="number" placeholder="Kwota początkowa (PLN)" />
+    <input id="lokataOprocentowanie" type="number" placeholder="Oprocentowanie roczne (%)" />
+    <input id="lokataOkres" type="number" placeholder="Okres (w miesiącach)" />
+    <button onclick="obliczLokate()">Oblicz</button>
+    <p id="wynikLokaty"></p>
+  </section>
 
-  <script src="game.js"></script>
+  <section>
+    <h2>Kalkulator Kredytu</h2>
+    <input id="kredytKwota" type="number" placeholder="Kwota kredytu (PLN)" />
+    <input id="kredytOprocentowanie" type="number" placeholder="Oprocentowanie roczne (%)" />
+    <input id="kredytOkres" type="number" placeholder="Okres (w miesiącach)" />
+    <button onclick="obliczKredyt()">Oblicz</button>
+    <p id="wynikKredytu"></p>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
