@@ -1,19 +1,25 @@
-function obliczLokate() {
-  const kwota = parseFloat(document.getElementById("lokataKwota").value);
-  const oprocentowanie = parseFloat(document.getElementById("lokataOprocentowanie").value) / 100;
-  const okres = parseInt(document.getElementById("lokataOkres").value);
-
-  const zysk = kwota * Math.pow(1 + oprocentowanie / 12, okres);
-  document.getElementById("wynikLokaty").textContent =
-    `Po ${okres} miesiącach otrzymasz: ${zysk.toFixed(2)} PLN`;
-}
-
-function obliczKredyt() {
-  const kwota = parseFloat(document.getElementById("kredytKwota").value);
-  const oprocentowanie = parseFloat(document.getElementById("kredytOprocentowanie").value) / 100 / 12;
-  const okres = parseInt(document.getElementById("kredytOkres").value);
-
-  const rata = kwota * (oprocentowanie * Math.pow(1 + oprocentowanie, okres)) / (Math.pow(1 + oprocentowanie, okres) - 1);
-  document.getElementById("wynikKredytu").textContent =
-    `Miesięczna rata: ${rata.toFixed(2)} PLN`;
-}
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Symulator Developera</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <h1>Symulator Developera</h1>
+  <div id="stats"></div>
+  <div id="apartmentsList"></div>
+  <hr>
+  <button onclick="buyApartment()">Kup mieszkanie</button>
+  <button onclick="sellApartment()">Sprzedaj mieszkanie</button>
+  <button onclick="upgradeApartment()">Ulepsz mieszkanie</button>
+  <button onclick="rentApartment()">Wynajmij mieszkanie</button>
+  <button onclick="earnMoney()">Zarabiaj</button>
+  <button onclick="takeLoan()">Weź kredyt</button>
+  <button onclick="repayLoan()">Spłać ratę kredytu</button>
+  <button onclick="nextTurn()">Następna tura</button>
+  <script src="script.js"></script>
+</body>
+</html>
