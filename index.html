@@ -3,31 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="manifest" href="manifest.json">
+  <title>Symulator Developera</title>
   <link rel="stylesheet" href="style.css" />
-  <title>Kalkulator Finansowy</title>
+  <link rel="manifest" href="manifest.json">
 </head>
 <body>
-  <h1>Kalkulator Finansowy</h1>
-
-  <section>
-    <h2>Kalkulator Lokaty</h2>
-    <input id="lokataKwota" type="number" placeholder="Kwota początkowa (PLN)" />
-    <input id="lokataOprocentowanie" type="number" placeholder="Oprocentowanie roczne (%)" />
-    <input id="lokataOkres" type="number" placeholder="Okres (w miesiącach)" />
-    <button onclick="obliczLokate()">Oblicz</button>
-    <p id="wynikLokaty"></p>
-  </section>
-
-  <section>
-    <h2>Kalkulator Kredytu</h2>
-    <input id="kredytKwota" type="number" placeholder="Kwota kredytu (PLN)" />
-    <input id="kredytOprocentowanie" type="number" placeholder="Oprocentowanie roczne (%)" />
-    <input id="kredytOkres" type="number" placeholder="Okres (w miesiącach)" />
-    <button onclick="obliczKredyt()">Oblicz</button>
-    <p id="wynikKredytu"></p>
-  </section>
-
+  <h1>Symulator Developera</h1>
+  <div id="stats"></div>
+  <div id="apartmentsList"></div>
+  <hr>
+  <button onclick="buyApartment()">Kup mieszkanie</button>
+  <button onclick="sellApartment()">Sprzedaj mieszkanie</button>
+  <button onclick="upgradeApartment()">Ulepsz mieszkanie</button>
+  <button onclick="rentApartment()">Wynajmij mieszkanie</button>
+  <button onclick="earnMoney()">Zarabiaj</button>
+  <button onclick="takeLoan()">Weź kredyt</button>
+  <button onclick="repayLoan()">Spłać ratę kredytu</button>
+  <button onclick="nextTurn()">Następna tura</button>
   <script src="script.js"></script>
 </body>
 </html>
